@@ -1,0 +1,12 @@
+#N canvas 536 35 383 228 10;
+#X obj 42 112 pyext pyws ws;
+#X obj 42 86 inlet;
+#X obj 117 87 inlet;
+#X obj 42 139 outlet;
+#X obj 117 137 outlet;
+#X text 45 48 wrapper to load pyext external from subdirectory \, etc
+;
+#X connect 0 0 3 0;
+#X connect 0 1 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
