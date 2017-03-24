@@ -1,0 +1,60 @@
+#N canvas 392 360 839 469 10;
+#X floatatom 149 132 5 0 0 0 - - -, f 5;
+#X floatatom 286 129 5 0 0 0 - - -, f 5;
+#X floatatom 63 20 5 0 0 0 - - -, f 5;
+#X floatatom 94 175 5 0 0 0 - - -, f 5;
+#X floatatom 206 168 5 0 0 0 - - -, f 5;
+#X floatatom 62 328 5 0 0 0 - - -, f 5;
+#X text 360 49 Moving average convergence divergence (MACD) is a trend-following
+momentum indicator that shows the relationship between two moving averages
+of prices. The MACD is calculated by subtracting the 26-day exponential
+moving average (EMA) from the 12-day EMA. A nine-day EMA of the MACD
+\, called the "signal line" \, is then plotted on top of the MACD \,
+functioning as a trigger for buy and sell signals.;
+#X msg 199 221 9;
+#X floatatom 199 241 5 0 0 0 - - -, f 5;
+#X floatatom 113 279 5 0 0 0 - - -, f 5;
+#X obj 149 83 loadbang;
+#X obj 63 104 s \$0-price;
+#X obj 62 128 r \$0-price;
+#X obj 199 127 r \$0-price;
+#X obj 62 228 -;
+#X msg 149 113 12;
+#X msg 286 109 26;
+#X text 213 259 <-- signal line;
+#X text 102 326 <-- MACD;
+#X obj 199 201 loadbang;
+#X obj 113 297 s \$0-siglin;
+#X obj 377 297 r \$0-siglin;
+#X obj 362 276 r \$0-macd;
+#X obj 362 319 >;
+#X floatatom 362 343 5 0 0 0 - - -, f 5;
+#X text 103 19 <-- price;
+#X obj 62 346 s \$0-macd;
+#X obj 62 149 avg.emavg;
+#X obj 199 147 avg.emavg;
+#X obj 112 258 avg.emavg;
+#X connect 0 0 27 1;
+#X connect 1 0 28 1;
+#X connect 2 0 11 0;
+#X connect 5 0 26 0;
+#X connect 7 0 8 0;
+#X connect 8 0 29 1;
+#X connect 9 0 20 0;
+#X connect 10 0 15 0;
+#X connect 10 0 16 0;
+#X connect 12 0 27 0;
+#X connect 13 0 28 0;
+#X connect 14 0 5 0;
+#X connect 14 0 29 0;
+#X connect 15 0 0 0;
+#X connect 16 0 1 0;
+#X connect 19 0 7 0;
+#X connect 21 0 23 1;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 27 0 3 0;
+#X connect 27 0 14 0;
+#X connect 28 0 4 0;
+#X connect 28 0 14 1;
+#X connect 29 0 9 0;

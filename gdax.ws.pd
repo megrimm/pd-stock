@@ -1,0 +1,14 @@
+#N canvas 655 37 383 228 10;
+#X declare -path script;
+#X obj 42 86 inlet;
+#X obj 117 87 inlet;
+#X obj 42 139 outlet;
+#X obj 117 137 outlet;
+#X text 45 48 wrapper to load pyext external from subdirectory \, etc
+;
+#X obj 37 22 declare -path script;
+#X obj 42 112 pyext ./script/gdaxws ws;
+#X connect 0 0 6 0;
+#X connect 1 0 6 1;
+#X connect 6 0 2 0;
+#X connect 6 1 3 0;

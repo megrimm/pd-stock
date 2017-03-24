@@ -1,0 +1,28 @@
+#N canvas 521 144 760 675 10;
+#X text 283 22 The relative strength index (RSI) is a momentum indicator
+developed by noted technical analyst Welles Wilder \, that compares
+the magnitude of recent gains and losses over a specified time period
+to measure speed and change of price movements of a security. It is
+primarily used to attempt to identify overbought or oversold conditions
+in the trading of an asset.;
+#X text 290 309 RSI = 100 - 100 / (1 + RS) RS = Average Gain / Average
+Loss;
+#X text 284 117 The RSI provides a relative evaluation of the strength
+of a security's recent price performance \, thus making it a momentum
+indicator. RSI values range from 0 to 100 The default time frame for
+comparing up periods to down periods is 14 \, as in 14 trading days.
+;
+#X text 286 192 Traditional interpretation and usage of the RSI is
+that RSI values of 70 or above indicate that a security is becoming
+overbought or overvalued \, and therefore may be primed for a trend
+reversal or corrective pullback in price. On the other side of RSI
+values \, an RSI reading of 30 or below is commonly interpreted as
+indicating an oversold or undervalued condition that may signal a trend
+change or corrective price reversal to the upside.;
+#X text 290 346 The very first calculations for average gain and average
+loss are simple 14 period averages. First Average Gain = Sum of Gains
+over the past 14 periods / 14 First Average Loss = Sum of Losses over
+the past 14 periods / 14 The second \, and subsequent \, calculations
+are based on the prior averages and the current gain loss: Average
+Gain = [(previous Average Gain) x 13 + current Gain] / 14 Average Loss
+= [(previous Average Loss) x 13 + current Loss] / 14;
